@@ -5,15 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp">
+    tools:context=".SignIn">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="188dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
 
 
         <TextView
@@ -22,9 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_weight="1"
-            android:hint="Halo !"
+            android:hint="Halo, Selamat datang kembali !"
             android:textColorHint="@color/blue"
-            android:textSize="30dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -34,21 +35,10 @@
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
-            android:hint="Buat akun baru !"
-            android:textSize="20dp" />
+            android:textColorHint="@color/gray"
+            android:hint="Kami sangat senang bertemu dengan kamu lagi!"
+            android:textSize="15dp" />
 
-        <EditText
-            android:id="@+id/fullName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/kolom"
-            android:ems="10"
-            android:hint="Full Name"
-            android:inputType="text"
-            android:padding="15dp" />
 
         <EditText
             android:id="@+id/username"
@@ -63,18 +53,6 @@
             android:inputType="text"
             android:padding="15dp" />
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/kolom"
-            android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="15dp" />
 
         <EditText
             android:id="@+id/password"
@@ -89,28 +67,48 @@
             android:inputType="textPassword"
             android:padding="15dp" />
 
-        <EditText
-            android:id="@+id/confirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/kolom"
-            android:ems="10"
-            android:hint="Confirm Password"
-            android:inputType="textPassword"
-            android:padding="15dp" />
-
         <Button
-            android:id="@+id/signUp"
+            android:id="@+id/signIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_marginHorizontal="30dp"
             android:layout_weight="1"
-            android:hint="Sign Up"
-            android:textColorHint="@color/white"/>
+            android:text="Sign In" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:gravity="center"
+          android:layout_marginTop="8dp"
+          >
+
+          <TextView
+              android:id="@+id/kata"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+
+              android:textColorHint="@color/gray"
+              android:hint="Tidak memiliki akun? "
+              android:textSize="12dp" />
+
+          <TextView
+              android:id="@+id/signUp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+
+              android:textColorHint="@color/ungu"
+              android:hint="Sign Up Sekarang!"
+              android:textSize="12dp" />
+
+
+      </LinearLayout>
+
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

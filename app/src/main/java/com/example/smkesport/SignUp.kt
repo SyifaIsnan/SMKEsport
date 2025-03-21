@@ -1,5 +1,6 @@
 package com.example.smkesport
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -38,22 +39,22 @@ class SignUp : AppCompatActivity() {
             val password = binding.password.text.toString()
             val confirmPassword = binding.confirmPassword.text.toString()
 
-//            fullName.isEmpty()
-//            if (fullName.isEmpty() or username.isEmpty() or email.isEmpty() or password.isEmpty() or confirmPassword.isEmpty()){
-//                Toast.makeText(this@SignUp, "Data tidak boleh kosong!", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//
-//            }
-//
-//            if((username.length < 6) or (password.length < 6)){
-//                Toast.makeText(this@SignUp, "Data tidak boleh kurang dari 6 karakter", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//            }
-//
-//            if(password == confirmPassword){
-//                Toast.makeText(this@SignUp, "Password harus sama!", Toast.LENGTH_SHORT).show()
-//                return@setOnClickListener
-//            }
+            fullName.isEmpty()
+            if (fullName.isEmpty() or username.isEmpty() or email.isEmpty() or password.isEmpty() or confirmPassword.isEmpty()){
+                Toast.makeText(this@SignUp, "Data tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+
+            }
+
+            if((username.length < 6) or (password.length < 6)){
+                Toast.makeText(this@SignUp, "Data tidak boleh kurang dari 6 karakter", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if(password != confirmPassword){
+                Toast.makeText(this@SignUp, "Password harus sama!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             val jsonobject = JSONObject()
             jsonobject.put("fullName", fullName)
@@ -80,6 +81,8 @@ class SignUp : AppCompatActivity() {
                 } else {
                     runOnUiThread{
                         Toast.makeText(this@SignUp, "Berhasil membuat akun!", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this@SignUp, SignIn::class.java)
+                        startActivity(intent)
                     }
                 }
             }
